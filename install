@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# parse into an array again
+installs=($@)
+
+read -p "Full System Upgrade ? [y/n]" confirm
+
+if [[ "${confirm}" == "y" ]]; then
+	echo -e "\n\n"
+	echo -e "/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / "
+	echo "UPDATING"
+	echo -e "/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / "
+	echo -e ""
+	pacman -Syu
+fi
+
+for i in "${installs[@]}"; do
+	echo -e "\n\n"
+	echo -e "/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / "
+	echo -e "INSTALLING ${i}"
+	echo -e "/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / "
+	echo -e ""
+	pacman -S --noconfirm "${i}"
+done

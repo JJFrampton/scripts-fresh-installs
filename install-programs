@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+programs=('feh' 'docker' 'git')
+
+# send to script as one argument / string
+./install "${programs[@]}"
