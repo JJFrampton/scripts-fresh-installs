@@ -1,0 +1,9 @@
+Rough points to remember:
+
+set up login manager (sddm)
+set up sudo / wheel groups & enable in visudo
+install and enable docker
+set up and add users to docker group
+clone configs and set up
+install application launcher
+generate ssh keys
