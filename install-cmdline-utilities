@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-utilities=('tmux' 'ranger' 'tree' 'tldr' 'unzip' 'jq')
+utilities=('tmux' 'ranger' 'tree' 'tldr' 'unzip' 'jq' 'openssh')
 
 ./install "${utilities[@]}"
