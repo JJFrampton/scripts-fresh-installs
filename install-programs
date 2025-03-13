@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-programs=('feh' 'docker' 'git' 'vlc')
+# feh is supposedly not needed with sway / wayland
+programs=('feh' 'docker' 'git' 'vlc' 'firefox')
 
 # send to script as one argument / string
 ./install "${programs[@]}"
